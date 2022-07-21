@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font awesome link -->
+    <script src="https://kit.fontawesome.com/415069f141.js" crossorigin="anonymous"></script>
+    <!-- bootstrap links -->
+    <link
+      rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <!-- css link -->
+    <link rel="stylesheet" href="../Blogs CSS/Blog_1.css" />
+    <title>icode</title>
+  </head>
+  <body>      
+      <!-- navbar code starts here -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand mx-5 font-weight-bold" href="#">icode</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container text-uppercase ">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link mx-2" href="../Index.html">Home</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-2" href="Practice.html">Practice</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-2" href="#">Development</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-2" href="Notes.html">Notes <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link mx-2" href="#">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-2" href="#">Connect</a>
+                  </li>
+              </ul>
+          </nav>
+          <!-- navbar code ends here -->
+
+          <!-- Blog Content Starts Here -->
+          
+          <section class="Content">
+            <div class="container">
+              <h1>Make Your Chrome Extension in Just 3 Simple Steps</h1>
+              <p>
+                Making a chrome extension is as simple as making a website in HTML, CSS and Javascript.
+             <br>  without wasting anytime lets start making our extension.
+              </p>
+              <h3>
+                Preview of Our Extension.
+              </h3>
+              <img src="../img/Extension Preview.png" alt="Extension Image" class="image">
+              <img src="../img/Extension Preview 1.png" alt="Extension Image">
+              <h3>-> Step-1 : Creating a manifest file.</h3>
+              <p>
+                Create a <strong>manifest.json</strong> file and write the code given below.
+              </p>
+              <div class="code_1 col-lg-8 col-md-8 col-12">
+                { <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"manifest_version":2, <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"name":"Keep Notes", <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"version":"1.0", <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"description":"Create notes easily", <br>
+                        <br>
+                  // size of icons that are displayed on chome browser.  <br>
+                        <br>
+                  "icons":{ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;"128":"images/icon128.png", <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;"48":"images/icon48.png", <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;"16":"images/icon16.png" <br>
+                  }, <br>
+                   <br>
+                  // on clicking the icon following default action takes place  <br>
+                   <br>
+                  "browser_action":{ <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;"default_popup":"index.html", <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;"default_icon":"images/icon48.png", <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;"default_title":"Keep Notes" <br>
+                  }, <br>
+                   <br>
+                  // We need this extension on all the tabs so here we ask for permissions <br>
+                    <br> 
+                  "permissions":[ <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"tabs" <br>
+                  ] <br>
+              } <br>
+              </div>
+              <h3>-> Step-2 : Creating html and css file.</h3>
+              <p>
+                Create <strong>HTML and CSS</strong> file and write the code given below.
+              </p>
+              <p>index.html file</p>
+              <div class="code_1 col-lg-8 col-md-8 col-12">
+                &lt;!DOCTYPE html> <br>
+                &lt;html lang="en"> <br>
+                &nbsp;&lt;head> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8" /> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="style.css" /> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;title>Keep Notes&lt;/title> <br>
+                &nbsp;&lt;/head> <br>
+                &nbsp;&lt;body> <br>
+                &nbsp;&nbsp;&lt;div class="heading"> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1>My Notebook&lt;/h1> <br>
+                &nbsp;&nbsp;&lt;/div> <br>
+                &nbsp;&nbsp;&lt;div class="section"> <br>
+                &nbsp;&nbsp;&nbsp;&lt;div class="navbar"> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="collection" id="collectionbtn" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;href="collection.html">Collection&lt;/a> <br>
+                &nbsp;&nbsp;&lt;/div> <br>
+                &nbsp;&nbsp;&lt;div class="notes"> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;textarea name="notes" id="addText" rows="3" class="text">&lt;/textarea> <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="add-notes" id="addBtn">Add Notes&lt;/button> <br>
+                &nbsp;&nbsp;&lt;/div>   <br>
+                &nbsp;&nbsp;&lt;/div>   <br>
+                    <br>
+                    <br>
+
+                    &nbsp;&lt;script src="Javascript/app.js">&lt;/script> <br>
+                    &nbsp;&lt;/body> <br>
+                    &nbsp;&lt;/html> <br>
+              </div> 
+              <p>style.css File</p>
+              <div class="code_1 col-lg-8 col-md-8 col-12">
+                *{ <br>
+                  margin: 0; <br>
+                  padding: 0; <br>
+                  box-sizing: border-box; <br>
+              } <br>
+              body{ <br>
+                  width: 400px; <br>
+                  height: 500px; <br>
+              } <br>
+              .heading { <br>
+                  width: 400px; <br>
+                  height: 60px; <br>
+                  padding-top:10px ; <br>
+                  padding-bottom: 5px; <br>
+                  background-color: 	#ffd700; <br>
+                  justify-content: center; <br>
+                  text-align: center; <br>
+              } <br>
+              h1 { <br>
+                  font-size: 30px; <br>
+                  font-family: sans-serif; <br>
+                  color: black; <br>
+              } <br>
+              .section{ <br>
+                  width: 400px; <br>
+                  height: 440px; <br>
+                  justify-content: center; <br>
+                  align-items: center; <br>
+                  background-color: 	#ffd700; <br>
+              } <br>
+              .navbar{ <br>
+                  width: 300px; <br>
+                  height: 70px; <br>
+                  margin-left: 50px; <br>
+                  box-shadow: -10px -10px 15px rgba(129, 79, 79, 0.15) , 10px 10px 15px rgba(70, 70, 70, 0.12) ; <br>
+                  display: flex; <br>
+                  position: absolute; <br>
+                  border-radius: 50px; <br>
+                  align-items: center; <br>
+                  justify-content: space-around; <br>
+              } <br>
+              .navbar .collection { <br>
+                  width: 300px; <br>
+                  height: 70px; <br>
+                  padding-top: 12px; <br>
+                  border-radius: 50px; <br>
+                  font-size: 30px; <br>
+                  text-decoration: none; <br>
+                  text-align: center; <br>
+                  background-color: #ffd700; <br>
+                  color: black; <br>
+              } <br>
+              .navbar .collection:hover{ <br>
+                  background-color: black; <br>
+                  color: #ffd700; <br>
+                  cursor: pointer; <br>
+              } <br>
+              .notes{ <br>
+                  width: 300px; <br>
+                  height: 250px; <br>
+                  margin-left: 50px; <br>
+                  padding-top: 100px; <br>
+              } <br>
+              .notes .text{ <br>
+                  width: 300px; <br>
+                  height: 250px; <br>
+                  padding-left: 15px; <br> 
+                  padding-top: 10px; <br> 
+                  padding-right: 10px; <br>
+                  font-size: 17px; <br>
+                  font-family: sans-serif; <br>
+                  background-color: white; <br>
+              } <br>
+              .notes .add-notes { <br>
+                  margin-top: 10px; <br>
+                  width: 150px; <br>
+                  height: 50px; <br>
+                  font-size: 15px; <br>
+                  background-color: black; <br>
+                  color: #ffd700; <br>
+                  text-decoration: none; <br>
+                  border-radius: 25px; <br>
+              } <br>
+              .notes .add-notes:hover{ <br>
+                  cursor: pointer; <br>
+              } <br>
+              </div>
+              <p> collection.html file</p>
+              <div class="code_1 col-lg-8 col-md-8 col-12">
+                &lt;!DOCTYPE html> <br>
+                &lt;html lang="en"> <br>
+                  &nbsp;&lt;head> <br>
+                    &nbsp;&nbsp;&nbsp;&lt;meta charset="UTF-8" /> <br>
+                    &nbsp;&nbsp;&nbsp;&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /> <br>
+                    &nbsp;&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /> <br>
+                    &nbsp;&nbsp;&nbsp;&lt;link rel="stylesheet" href="collection.css" /> <br>
+                    &nbsp;&nbsp;&nbsp;&lt;title>collection&lt;/title> <br>
+                    &nbsp;&lt;/head> <br>
+                  &lt;body> <br>
+                    &nbsp;&nbsp;&lt;div class="heading"> <br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1>My Notebook</h1> <br>
+                      &nbsp;&nbsp;&lt;/div> <br>
+                      &nbsp;&lt;/div class="section"> <br>
+                        &nbsp;&nbsp;&nbsp;&lt;div class="navbar"> <br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="collection" id="makenotes" href="index.html">Make Notes&lt&lt;/a> <br>
+                          &nbsp;&nbsp;&nbsp;&lt;/div> <br>
+                          &nbsp;&nbsp;&nbsp;&lt;div class="notes"> <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="cards" id="notes"> &lt;/div> <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div> <br>
+                            &nbsp;&nbsp;&nbsp;&lt;/div> <br>
+                            &nbsp;&lt;script src="Javascript/app.js">&lt;/script> <br>
+                  &lt;/body> <br>
+                &lt;/html> <br>
+              </div> 
+              <p>Collection.css file</p>
+              <div class="code_1 col-lg-8 col-md-8 col-12">
+                *{ <br>
+                  margin: 0; <br>
+                  padding: 0; <br>
+                  box-sizing: border-box; <br>
+              } <br>
+              body{ <br>
+                  width: 400px; <br>
+                  height: 500p <br>x; <br>
+              } <br>
+              .heading { <br>
+                  width: 400px; <br>
+                  height: 60px; <br>
+                  padding-top:10px ; <br>
+                  padding-bottom: 5px; <br>
+                  background-color: 	#ffd700; <br>
+                  justify-content: center; <br>
+                  text-align: center; <br>
+              } <br>
+              h1 { <br>
+                  font-size: 30px; <br>
+                  font-family: sans-serif; <br>
+                  color: black; <br>
+              } <br>
+              .section{ <br>
+                  width: 400px; <br>
+                  height: 440px; <br>
+                  justify-content: center; <br>
+                  align-items: center; <br>
+                  background-color: 	#ffd700; <br>
+              } <br>
+              .navbar{ <br>
+                  width: 300px; <br>
+                  height: 70px; <br>
+                  margin-left: 50px; <br>
+                  box-shadow: -10px -10px 15px rgba(129, 79, 79, 0.15) , 10px 10px 15px rgba(70, 70, 70, 0.12) ; <br>
+                  display: flex; <br>
+                  position: absolute; <br>
+                  border-radius: 50px; <br>
+                  align-items: center; <br>
+                  justify-content: space-around; <br>
+              } <br>
+               <br>
+              .navbar .collection { <br>
+                  width: 300px; <br>
+                  height: 70px; <br>
+                  padding-top: 12px; <br>
+                  border-radius: 50px; <br>
+                  font-size: 30px; <br>
+                  text-decoration: none; <br>
+                  text-align: center; <br>
+                  background-color: #ffd700; <br>
+                  color: black; <br>
+              } <br>
+              .navbar .collection:hover{ <br>
+                  background-color: black; <br>
+                  color: #ffd700; <br>
+                  cursor: pointer; <br>
+              } <br>
+               <br>
+              .notes{ <br>
+                  width: 400px; <br>
+                  height: 440px; <br>
+                  padding-left: 20px ; <br>
+                  padding-top: 100px; <br>
+                  overflow: scroll; <br>
+              }
+               <br>
+              .cards{ <br>
+                  float: left; <br>
+                  width: 150px; <br>
+                  height: 200px; <br>
+                  margin: 10px 10px 10px 10px;  <br>
+                  background-color: white; <br>
+              } <br>
+              .cards .delete{ <br>
+                  width: 100px; <br>
+                  height: 30px; <br>
+                  justify-content: center; <br>
+                  align-items: center; <br>
+                  margin-left: 25px; <br>
+                  color: white; <br>
+                  background-color: rgb(255, 70, 70); <br>
+                  border-radius: 30px; <br>
+              }
+              </div>
+              <div class="center">
+                <div class="button">
+                  <a href="../chrome extension.rar"download>Download Source Code</a>
+                </div>
+              </div>
+              <h3>-> Step-3 : Publishing it locally</h3>
+              <p>
+                1. Click on 3 dots.
+                <br><br>
+                  <img src="../img/Step-1.png" alt="image">
+                  <br><br>
+                2. Click on <strong>  More tools </strong>and then <strong>Extensions.</strong>
+                <br>
+                3. Enable <Strong>developer mode.</Strong> 
+                <br><br>
+                <img src="../img/Step-3.png" alt="image">
+                <br><br>
+                4. Click <strong>Load unpacked</strong> and select the folder, then upload that folder.
+                <br><br>
+                <img src="../img/Step-4.png" alt="image">
+                <br><br>
+                5. Now You are Ready to use your Extension.
+              </p>
+            </div> 
+          </section> 
+
+          
+          <!-- Blog content ends here -->
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html> 
