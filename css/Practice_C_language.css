@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar css starts here */
+
+.navbar-brand{
+    font-size: 30px;
+    font-family: sans-serif;
+}
+.navbar-nav li a:hover{
+    color:rgb(255, 179, 0) !important;
+}
+.navbar-nav li a::after{
+    content: '';
+    display: flex;
+    width: 0%;
+    height: 1px;
+    background-color: rgb(255, 179, 0);
+    transition: width .3;
+}
+.navbar-nav li a:hover::after{
+    width: 100%;
+    transition: width .4s;
+}
+/* Navbar css ends here */
+
+
+/* Questions Code Starts here  */
+.Questions{
+    margin-top: 100px;
+}
+.row{
+    margin-bottom: 20px !important;
+}
+.button{
+    display: flex;
+}
+.button .button-1{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    padding-top: 4px;
+    border-radius: 30px;
+    background-color: rgb(255, 179, 0);
+}
+.button .button-2{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 260px;
+    height: 40px;
+    margin-left: 20px;
+    padding-top: 4px;
+    border-radius: 30px;
+    background-color: 	#7CFC00;
+
+}
+.button .button-3{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 260px;
+    height: 40px;
+    margin-left: 20px;
+    padding-top: 4px;
+    border-radius: 30px;
+    background-color:	#7CFC00;
+
+}
+
+.button .button-1 a{
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.button .button-2 a{
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.button .button-3 a{
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+/* Questions Code ends here  */

@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Navbar css starts here */
+
+.navbar-brand{
+    font-size: 30px;
+    font-family: sans-serif;
+}
+.navbar-nav li a:hover{
+    color:rgb(255, 179, 0) !important;
+}
+.navbar-nav li a::after{
+    content: '';
+    display: flex;
+    width: 0%;
+    height: 1px;
+    background-color: rgb(70, 62, 44);
+    transition: width .3;
+}
+.navbar-nav li a:hover::after{
+    width: 100%;
+    transition: width .4s;
+}
+/* navbar css ends here */
+
+/* blog section css starts here  */
+.Blogs{
+    padding: 80px;
+}
+.Blogs .container{
+    background-color: #f7f7f7d8;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.267);
+}
+
+.heading{
+    margin-top: 20px;
+    padding-top: 20px;
+    color: rgb(255, 179, 0);
+    display: flex;
+}
+.blog-look{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.blog-look h3{
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+.blog-look a{
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    background-color:rgb(255, 179, 0) ;
+    text-decoration: none;
+    border-radius: 20px;
+}
+.blog-look a:hover{
+    color: rgb(255, 179, 0) ;
+    background-color: black;
+    cursor: pointer;
+}
+/* blog section css ends here  */

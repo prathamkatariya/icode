@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Navbar css starts here */
+
+.navbar-brand{
+    font-size: 30px;
+    font-family: sans-serif;
+}
+.navbar-nav li a:hover{
+    color:rgb(255, 179, 0) !important;
+}
+.navbar-nav li a::after{
+    content: '';
+    display: flex;
+    width: 0%;
+    height: 1px;
+    background-color: rgb(255, 179, 0);
+    transition: width .3;
+}
+.navbar-nav li a:hover::after{
+    width: 100%;
+    transition: width .4s;
+}
+/* navbar css ends here */
+
+/* download notes section css starts here */
+
+.download_notes{
+    margin-top: 80px;
+}
+.download{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    border: none;
+}
+.download .row a{
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 10px !important;
+    padding-top: 5px;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    color: black;
+    background-color: rgb(255, 179, 0);
+    font-weight: 600;
+}
+.download .row a:hover{
+    background-color: black;
+    color: rgb(255, 179, 0);
+}
+
+.row .subject{
+    padding-top: 20px;
+}
+.row .button{
+    padding-top: 20px;
+    margin-top: 11px;
+}
+
+
+/* download notes section css ends here */
