@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar css starts here */
+
+.navbar-brand{
+    font-size: 30px;
+    font-family: sans-serif;
+}
+.navbar-nav li a:hover{
+    color:rgb(255, 179, 0) !important;
+}
+.navbar-nav li a::after{
+    content: '';
+    display: flex;
+    width: 0%;
+    height: 1px;
+    background-color: rgb(255, 179, 0);
+    transition: width .3;
+}
+.navbar-nav li a:hover::after{
+    width: 100%;
+    transition: width .4s;
+}
+/* Navbar css ends here */
+
+/* Solution css starts here */
+
+.solution .container{
+    margin-top: 150px;
+    padding-top: 20px;
+}
+
+#myInput{
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    background-color: black;
+    color: rgb(255, 179, 0);
+}
+
+/* Solution css ends here */
